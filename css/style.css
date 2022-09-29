@@ -142,20 +142,33 @@ body {
 .link:focus {
   color: var(--accent-color);
 }
+
 .active-site-link {
   color: var(--accent-color);
 }
+
 .contact {
   color: var(--gray-color);
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.link:hover .icon-contact,
+.link:focus .icon-contact {
+  fill: var(--accent-color);
+  stroke: var(--accent-color);
 }
 
 /* footer */
 footer {
   background-color: var(--background-color-dark);
+  padding: 60px 15px;
 }
 
-.footer {
-  padding: 60px 15px;
+.footer-block {
+  display: flex;
+  column-gap: 70px;
 }
 
 .footer-logo {
@@ -186,6 +199,19 @@ footer {
 .footer-map:focus {
   color: var(--accent-color);
 }
+
+.footer-go {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+
 .footer-contact {
   font-weight: 400;
   color: var(--transparent-color);
@@ -194,15 +220,52 @@ footer {
   font-style: normal;
 }
 
+.footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+}
+
+.footer-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-icon {
+  fill: var(--white-color);
+  width: 20px;
+  height: 20px;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--accent-color);
+}
+
 /* --------------------------------------------------------------------------- */
 /* сss for index.html */
 
 /* ===== HERO ===== */
 .hero {
-  background: var(--background-color-dark);
+  background-color: var(--background-color-dark);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/hero-bg.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
 
   padding-top: 200px;
   padding-bottom: 200px;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 .hero-title {
   color: var(--white-color);
@@ -254,6 +317,20 @@ footer {
 
 .advantages-item {
   flex-basis: calc((100% - 3 * 30px) / 4);
+}
+.advantages-icon-wrapper {
+  background: #f5f4fa;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 70px;
+  margin-bottom: 30px;
+}
+
+.advantages-icon {
+  width: 70px;
+  height: 70px;
 }
 
 .advantage-title {
@@ -319,7 +396,7 @@ footer {
 }
 
 .team-item-wrapper {
-  padding: 30px 60px;
+  padding: 30px 20px;
   text-align: center;
 }
 
@@ -333,8 +410,69 @@ footer {
 }
 .person-profession {
   color: var(--gray-color);
+  margin-bottom: 16px;
+}
+
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  justify-content: center;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+}
+
+.social-link-icon {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+}
+.social-link:hover,
+.social-link:focus {
+  /* background-color: var(--accent-color); */
+  background-color: var(--accent-color);
+}
+.social-link:hover .social-link-icon,
+.social-link:focus .social-link-icon {
+  fill: #ffffff;
+}
+
+/* ===== CLIENTS ===== */
+
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+}
+
+.clients-item {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  flex-basis: calc((100% - 5 * 30px) / 6);
+  padding: 16px;
+}
+
+.client-icon {
+  width: 106px;
+  height: 60px;
+  fill: #afb1b8;
+}
+
+.client-link:hover .client-icon,
+.client-link:focus .client-icon {
+  fill: var(--accent-color);
 }
 /* --------------------------------------------------------------------------- */
+
 /* сss for portfolio.html */
 
 .filter-list {
@@ -378,12 +516,23 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+}
+
+.results-link {
   flex-basis: calc((100% - 2 * 30px) / 3);
 }
 
 .link-for-result {
   color: var(--text-color);
   text-decoration: none;
+}
+
+.link-for-result:hover,
+.link-for-result:focus {
+  display: inline-block;
+
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .result-description-wrapper {
@@ -405,3 +554,5 @@ footer {
   letter-spacing: 0.03em;
   color: var(--gray-color);
 }
+
+/* ============================================ */
