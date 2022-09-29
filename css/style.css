@@ -154,6 +154,10 @@ body {
   column-gap: 10px;
 }
 
+.icon-contact {
+  fill: #757575;
+}
+
 .link:hover .icon-contact,
 .link:focus .icon-contact {
   fill: var(--accent-color);
