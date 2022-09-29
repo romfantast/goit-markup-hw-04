@@ -458,7 +458,7 @@ footer {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   flex-basis: calc((100% - 5 * 30px) / 6);
-  padding: 16px;
+  padding: 16px 20px;
 }
 
 .client-icon {
